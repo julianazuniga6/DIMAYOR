@@ -11,13 +11,14 @@ Este API desarrollado usando Spark Java
 
 A continuación se describen cada uno de los servicios implementados en el API.
 
-| Servicio | Método HTTP | URL | Body | Resultado
+| Servicio | Método HTTP | URL | Body | Resultado |
 | ------ | ------ | ------ | ------ |
 | Obtener lista de equipos | GET | /api/v1/teams | - | Lista de equipos (Json)
 | Obtener información de un equipo | GET | /api/v1/teams/{nombreEquipo} | - | Equipo (Json)
 | Editar equipo | PUT | /api/v1/teams | Equipo (Json) | HTTP OK: 200
 | Borrar equipo | DELETE | /api/v1/teams/{nombreEquipo} | - | HTTP OK: 200
 | Agregar equipo | POST | /api/v1/teams | Equipo (Json) | HTTP OK: 200
+
 
 
 El formato Json de un equipo es el siguiente:
