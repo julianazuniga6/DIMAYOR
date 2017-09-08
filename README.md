@@ -2,7 +2,7 @@
 #### Computación en la nube
 #### Juliana Zúñiga
 
-_____________________________________________________
+***
 
 ##### DESARROLLO DEL API
 
@@ -34,5 +34,23 @@ El formato Json de un equipo es el siguiente:
 
 Se retorna NOT FOUND (404) cuando se intenta acceder a la información de un equipo que no existe. En los casos en que la información enviada al API sea inválida, por ejemplo, cuando se trata de actualizar un  equipo con año de fundación igual a cero, se retorna BAD REQUEST (400).
 
+***
 
 ### Para ejecutar  el proyecto:
+
+Clonar el repositorio y, dentro de la carpeta del mismo, ejecutar:
+
+```
+$ mvn compile
+```
+```
+$ mvn exec:java
+```
+
+Con lo anterior, se iniciará el servidor web local.
+
+Para acceder a los clientes web de AngularJS y AJAX, ingresar a las siguientes URL:
+
+> http://localhost:4567/angular
+
+> http://localhost:4567/ajax
