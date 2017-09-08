@@ -1,0 +1,5 @@
+model\Team.class
+utils\DimayorUtils.class
+model\DimayorModel.class
+api\DimayorAPI.class
+logic\DimayorLogic.class

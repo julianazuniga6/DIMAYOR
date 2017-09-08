@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Dimayor</title>
+  </head>
+  <body ng-app="dimayor" ng-controller="dimayor-ctrl" class="container">
+
+    <div class="jumbotron">
+      <h1>DIMAYOR</h1>
+      <p>Información de los equipos de la liga colombiana de fútbol</p>
+    </div>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Año de fundación</th>
+          <th>Títulos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="x in teams">
+          <td>{{ x.name }}</td>
+          <td>{{ x.year }}</td>
+          <td>{{ x.titles }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  <div class= "container">
+      <h4>Agregar información de equipo</h4>
+
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="name" class="control-label col-sm-1">Nombre:</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="name" ng-model="name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="year" class="control-label col-sm-1">Año de fundación:</label>
+          <div class="col-sm-3">
+            <input type="number" class="form-control" id="year" ng-model="year">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="titles" class="control-label col-sm-1">Cantidad de títulos:</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="titles" ng-model="titles">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" ng-click="addTeam()">
+          Agregar
+        </button>
+      </form>
+
+    </div>
+
+    <script src="dimayor-ctrl.js"></script>
+
+  </body>
+</html>
